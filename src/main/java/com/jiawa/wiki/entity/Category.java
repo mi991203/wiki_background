@@ -1,5 +1,9 @@
 package com.jiawa.wiki.entity;
 
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+import lombok.Setter;
+
 import java.io.Serializable;
 
 /**
@@ -10,6 +14,8 @@ import java.io.Serializable;
  * @author 作者
  * @since 2022-12-19
  */
+@Data
+@TableName("category")
 public class Category implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -33,43 +39,4 @@ public class Category implements Serializable {
      * 顺序
      */
     private Integer sort;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-    public Long getParent() {
-        return parent;
-    }
-
-    public void setParent(Long parent) {
-        this.parent = parent;
-    }
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-    public Integer getSort() {
-        return sort;
-    }
-
-    public void setSort(Integer sort) {
-        this.sort = sort;
-    }
-
-    @Override
-    public String toString() {
-        return "Category{" +
-            "id=" + id +
-            ", parent=" + parent +
-            ", name=" + name +
-            ", sort=" + sort +
-        "}";
-    }
 }

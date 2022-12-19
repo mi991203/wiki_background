@@ -1,0 +1,11 @@
+###
+POST {{pre_url}}/ebook/list
+Content-Type: application/json
+
+{
+  "page": 1,
+  "size": 4,
+  "obj": {
+    "name": "入门"
+  }
+}

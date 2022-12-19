@@ -3,6 +3,8 @@ package com.jiawa.wiki.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -15,6 +17,7 @@ import java.time.LocalDate;
  * @since 2022-12-19
  */
 @TableName("ebook_snapshot")
+@Data
 public class EbookSnapshot implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -54,67 +57,4 @@ public class EbookSnapshot implements Serializable {
      * 点赞增长
      */
     private Integer voteIncrease;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-    public Long getEbookId() {
-        return ebookId;
-    }
-
-    public void setEbookId(Long ebookId) {
-        this.ebookId = ebookId;
-    }
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
-    public Integer getViewCount() {
-        return viewCount;
-    }
-
-    public void setViewCount(Integer viewCount) {
-        this.viewCount = viewCount;
-    }
-    public Integer getVoteCount() {
-        return voteCount;
-    }
-
-    public void setVoteCount(Integer voteCount) {
-        this.voteCount = voteCount;
-    }
-    public Integer getViewIncrease() {
-        return viewIncrease;
-    }
-
-    public void setViewIncrease(Integer viewIncrease) {
-        this.viewIncrease = viewIncrease;
-    }
-    public Integer getVoteIncrease() {
-        return voteIncrease;
-    }
-
-    public void setVoteIncrease(Integer voteIncrease) {
-        this.voteIncrease = voteIncrease;
-    }
-
-    @Override
-    public String toString() {
-        return "EbookSnapshot{" +
-            "id=" + id +
-            ", ebookId=" + ebookId +
-            ", date=" + date +
-            ", viewCount=" + viewCount +
-            ", voteCount=" + voteCount +
-            ", viewIncrease=" + viewIncrease +
-            ", voteIncrease=" + voteIncrease +
-        "}";
-    }
 }

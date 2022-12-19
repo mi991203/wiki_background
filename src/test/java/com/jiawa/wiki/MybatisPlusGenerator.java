@@ -13,7 +13,7 @@ public class MybatisPlusGenerator {
         FastAutoGenerator.create("jdbc:mysql://192.168.137.10:3306/wiki", "root", "sh19991203")
                 .globalConfig(builder -> {
                     builder
-//                            .author("") // 设置作者
+                            .author("ShaoHong") // 设置作者
 //                            .enableSwagger() // 开启 swagger 模式
                             .fileOverride() // 覆盖已生成文件
                             .outputDir("D:\\code_file\\java\\wiki\\wiki_background\\src\\main\\java"); // 指定输出目录
